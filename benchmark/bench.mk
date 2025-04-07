@@ -22,6 +22,17 @@ $(RAW_GRAPH_DIR):
 .PHONY: bench-graphs
 bench-graphs: $(RAW_GRAPH_DIR) $(ALL_GRAPHS_WITH_PATHS)
 
+.PHONY: gen-twitter
+gen-twitter: ${RAW_GRAPH_DIR} ${GRAPH_DIR}/twitter.sg
+
+.PHONY: gen-web
+gen-web: $(RAW_GRAPH_DIR) $(GRAPH_DIR)/web.sg
+
+.PHONY: gen-road
+gen-road: $(RAW_GRAPH_DIR) $(GRAPH_DIR)/road.sg
+
+.PHONY: gen-kron
+gen-kron: $(RAW_GRAPH_DIR) $(GRAPH_DIR)/kron.sg
 
 # Real-world
 
